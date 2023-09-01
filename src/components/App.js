@@ -39,7 +39,7 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         <h1>To Do List</h1>
-        <input type = "text" onChange={(event) => setInput(event.target.value)}  value = {input} />
+        <textarea row = "3" onChange={(event) => setInput(event.target.value)}  value = {input} />
         <button className="add_tasks_section" onClick = {addItem}>Add</button>
         <ul className="tasks_section">
         {
@@ -47,7 +47,7 @@ const App = () => {
             return(
               <li className="task" key = {index}>
               {editingIndex === index ? (
-                <><input type="text" onChange={(event) => setEditedTask(event.target.value)} value={editedText} />
+                <><textarea row = "3" onChange={(event) => setEditedTask(event.target.value)} value={editedText} />
                 <button className="save" onClick={saveItem}>
                   Save
                 </button></>
